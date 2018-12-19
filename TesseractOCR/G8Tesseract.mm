@@ -158,7 +158,10 @@ namespace tesseract {
 
         if (absoluteDataPath != nil) {
             [self moveTessdataToDirectoryIfNecessary:absoluteDataPath];
+        } else {
+            absoluteDataPath = @"";
         }
+
         _absoluteDataPath = absoluteDataPath.copy;
         _configDictionary = configDictionary;
         _configFileNames = configFileNames;
